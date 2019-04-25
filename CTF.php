@@ -3,7 +3,7 @@
   <title>
     Calculator
   </title>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="des.css">
 <?php
 class Calcu{
 
