@@ -70,7 +70,7 @@ if ( $object1->expressionop == 'sum' );
 }
 echo '<br>';*/
 $token = isset($_POST['token']) ? $_POST['token'] : null;
-$token1 = urldecode($token);
+$token1 = urldecode(base64_decode($token));
 if($token1 == null)
 {
   $object1 = new Expression();
@@ -85,7 +85,7 @@ if($token1 == null)
     echo $Operator($object1->arr);
   }
   echo '<br>';
-  $token = urlencode(serialize($object1));
+  $token = base64_encode(urlencode(serialize($object1)));
 
   echo '<form action="CTF.php" method="post">';
   echo '<button name = "token" value ="'.$token.'">';
@@ -97,7 +97,7 @@ else {
   $Operator = (string)$object1->expressionop;
   echo $Operator($object1->arr);
   echo '<br>';
-  $token = urlencode(serialize($object1));
+  $token = base64_encode(urlencode(serialize($object1)));
 
   echo '<form action="CTF.php" method="post">';
   echo '<button name = "token" value ="'.$token.'">';
