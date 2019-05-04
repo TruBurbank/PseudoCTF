@@ -1,141 +1,40 @@
 @import url("https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro:200,400");
 
 body {
-  background-color: #e0e0eb;
   text-align: center;
-
+  background-color:black;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
 }
 h1{
   text-align: center;
+  border-style: solid;
+  border-color: #fbfbfb;
+  border-width: thin;
+}
+h3 {
+  color: #fbfbfb;
+  font-size:100px;
+}
+h4 {
 
+  font-size:100px;
+  color: #fff;
 }
 input[Type="text"]
 {
-  width: 30%;
+  width: 80%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  text-align: center;
+
 
 }
 
-input[Type="text"]:focus
-{
-  border: 3px solid #555;
-}
 input[Type="submit"]
 {
-  width: 15%;
+  width: 50%;
   padding: 12px 20px;
   margin: 8px 0;
+
   box-sizing: border-box;
-}
-.select-box {
-  position: relative;
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
-  font-size: 18px;
-  color: #60666d;
-
-  @media (min-width: 768px) {
-    width: 70%;
-  }
-
-  @media (min-width: 992px) {
-    width: 50%;
-  }
-
-  @media (min-width: 1200px) {
-    width: 30%;
-  }
-
-  &__current {
-    position: relative;
-    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
-    cursor: pointer;
-    outline: none;
-    &:focus {
-      & + .select-box__list {
-        opacity: 1;
-        animation-name: none;
-
-        .select-box__option {
-          cursor: pointer;
-        }
-      }
-
-      .select-box__icon {
-        transform: translateY(-50%) rotate(180deg);
-      }
-    }
-  }
-
-  &__icon {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    width: 20px;
-    opacity: 0.3;
-    transition: 0.2s ease;
-  }
-
-  &__value {
-    display: flex;
-  }
-
-  &__input {
-    display: none;
-
-    &:checked + .select-box__input-text {
-      display: block;
-    }
-  }
-
-  &__input-text {
-    display: none;
-    width: 100%;
-    margin: 0;
-    padding: 15px;
-    background-color: #fff;
-  }
-
-  &__list {
-    position: absolute;
-    width: 100%;
-    padding: 0;
-    list-style: none;
-    opacity: 0;
-
-    animation-name: HideList;
-    animation-duration: 0.5s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function: step-start;
-    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
-  }
-
-  &__option {
-    display: block;
-    padding: 15px;
-    background-color: #fff;
-
-    &:hover,
-    &:focus {
-      color: #546c84;
-      background-color: #fbfbfb;
-    }
-  }
-}
-
-@keyframes HideList {
-  from {
-    transform: scaleY(1);
-  }
-  to {
-    transform: scaleY(0);
-  }
 }
