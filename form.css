@@ -1,0 +1,237 @@
+
+body {
+	background-color: #000;
+}
+html,
+body {
+	height: 100%;
+}
+h2{
+	color: #FFFFFF;
+
+	font-size: 42px;
+	font-weight: 700;
+	text-transform: uppercase;
+
+
+}
+.imagebg h2
+{
+	opacity: 1;
+}
+.imagebg {
+	background-image: url("images/wallpaper2.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	-webkit-filter: blur(3px);
+
+  opacity: 0.3;
+  filter: alpha(opacity=60);
+}
+
+.form-container {
+	text-align: "center";
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	/*margin-top:90px;
+	margin-bottom: 30px;*/
+	padding: 30px;
+	background-color: #696969;
+
+	opacity: 0.9;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.form-container .row {
+	margin-bottom: 0;
+	opacity: 1;
+
+}
+
+
+/* label color */
+   .input-field label {
+     color: #9c9c9c;
+   }
+
+
+   input:not([type]):focus:not([readonly]),
+   input[type=text]:focus:not([readonly]),
+   textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #009ddc;
+    box-shadow: 0 1px 0 0 #009ddc;
+}
+input:not([type]):focus:not([readonly])+label,
+input[type=text]:focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #009ddc;
+}
+.form-container .btn {
+    background-color: #009ddc;
+
+}
+.submitbtn {
+	line-height: 48px;
+	display: block;
+	height: 48px;
+	width: 100%;
+}
+.form-container h3 {
+		font-size: 42px;
+
+		text-align: "center";
+		letter-spacing: 0.1em;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+
+}
+@media  all and (max-width: 640px) {
+	.form-container {
+		position: static;
+		-webkit-transform: translate(0, 0);
+		-ms-transform: translate(0, 0);
+		-o-transform: translate(0, 0);
+		transform: translate(0, 0);
+		width: 100%;
+		margin-top: 70px;
+		margin-bottom: 20px;
+			opacity: 0.8;
+	}
+	.form-container h3 {
+	    font-size: 24px;
+
+	}
+}
+.select-box {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+  font-size: 18px;
+  color: #60666d
+
+  @media (min-width: 768px) {
+    width: 70%;
+  }
+
+  @media (min-width: 992px) {
+    width: 50%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 30%;
+  }
+
+  &__current {
+    position: relative;
+    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+    cursor: pointer;
+    outline: none;
+
+    &:focus {
+      & + .select-box__list {
+        opacity: 1;
+
+        // We have to set "animation-name: none;" to make the list visible (read below how it works)
+
+        animation-name: none;
+
+        .select-box__option {
+          cursor: pointer;
+        }
+      }
+
+      .select-box__icon {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 20px;
+    opacity: 0.3;
+    transition: 0.2s ease;
+  }
+
+  &__value {
+    display: flex;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .select-box__input-text {
+      display: block;
+    }
+  }
+
+  &__input-text {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    background-color: #fff;
+  }
+
+  &__list {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+
+
+    animation-name: HideList;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: step-start;
+    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+  }
+
+  &__option {
+    display: block;
+    padding: 15px;
+    background-color: #fff;
+
+    &:hover,
+    &:focus {
+      color: #546c84;
+      background-color: #fbfbfb;
+    }
+  }
+}
+
+@keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
