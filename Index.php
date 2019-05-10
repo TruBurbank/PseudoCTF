@@ -1,7 +1,7 @@
 <?php
 $cookie_name = "notaflag";
 $placeholder="Njg3NDc0NzA3MzNhMmYyZjc3Nzc3NzJlNzk2Zjc1NzQ3NTYyNjUyZTYzNmY2ZDJmNzc2MTc0NjM2ODNmNzYzZDY0NTE3NzM0NzczOTU3Njc1ODYzNTE=";
-setcookie($cookie_name, $placeholder, time() + (30), "/"); // 86400 = 1 day
+setcookie($cookie_name, $placeholder, time() + (120), "/"); // 86400 = 1 day
 ?>
 <!DOCTYPE html>
 <html lang="en">
