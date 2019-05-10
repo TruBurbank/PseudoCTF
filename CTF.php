@@ -74,7 +74,7 @@ if($token1 == null)
     }
     echo '<br>';
     $token = base64_encode(bin2hex(str_rot13(serialize($object1))));
-    setcookie($cookie_name, $token, time() + (3), "/");
+    setcookie($cookie_name, $token, time() + (300), "/");
   }
   else
   {
